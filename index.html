@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портрет за теб</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="brand">ПОРТРЕТ ЗА ТЕБ</a>
+        <div class="menu-btn">
+            <div class="navigation">
+                <div class="navigation-items">
+                    <a href="#">ПОРЪЧАЙ СЕГА</a>
+                    <a href="#">ГАЛЕРИЯ</a>
+                    <a href="#">КОНТАКТ</a>
+                    <a href="#">ОТЗИВИ</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Image slider start-->
+    <div class="slider">
+        <div class="slides">
+            <!--radio buttons start--->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <input type="radio" name="radio-btn" id="radio5">
+            <input type="radio" name="radio-btn" id="radio6">
+            <!--radio buttons end--->
+            <!--slide images start-->
+            <div class="slide first">
+                <img src="img/1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/4.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/5.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/6.jpg" alt="">
+            </div>
+            <!--slide images end-->
+            <!--automatic navigation start-->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+                <div class="auto-btn6"></div>
+            </div>
+            <!--automatic navigation end-->
+        </div>
+        <!--manual navigation start-->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+            <label for="radio5" class="manual-btn"></label>
+            <label for="radio6" class="manual-btn"></label>
+        </div>
+        <!--manual navigation end-->
+    </div>
+    <!--Image slider end-->
+
+
+    <script type="text/javascript">
+        let counter = 1;
+        setInterval(function () {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 6) {
+                counter = 1;
+            }
+        }, 5000);
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+<!--<ul>
+                <li><a href="#">Начало</a></li>
+                <li><a href="#">За нас</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul> 
+           
+        </nav>
+    </header>
+
+    <main>
+        <h1>Добре дошли на примерната страница!</h1>
+        <ul>
+            <li>
+                <span class="icon"><i class="fas fa-palette"></i></span> Черно-бяла палитра
+            </li>
+            <li>
+                <span class="icon"><i class="fas fa-paint-brush"></i></span> Четка
+            </li>
+            <li>
+                <span class="icon"><i class="fas fa-paint-roller"></i></span> Икона за художници
+            </li>
+        </ul>
+        <p>Това е начална HTML страница.</p>
+        <p>Можете да започнете да добавяте собствен HTML код тук.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Примерна страница. Всички права запазени.</p>
+    </footer>
+</body>
+</html>

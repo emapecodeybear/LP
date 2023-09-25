@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Включване на библиотеките Counter -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <!--END-->
+    <title>Portrait for You</title>
+    
+</head>
+<body>
+    <nav> 
+        <div class="logo">
+            <h1>PFY</h1>
+        </div>
+        <div class="topnav" id="myTopnav">
+            <a href="#" class="icon" onclick="displayMenu()">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </a>
+            <a href="#">ABOUT</a>
+            <a href="#">GALLERY</a>
+            <a href="#">ORDER NOW</a>
+            <a href="#">REVIEW</a>
+        </div>
+    </nav>
+    
+    <div class="slider">
+        <img src="pic/slide1.jpg" alt="Slide 1" class="slide">
+        <img src="pic/slide2.jpg" alt="Slide 2" class="slide">
+        <img src="pic/slide3.jpg" alt="Slide 3" class="slide">
+        <img src="pic/slide4.jpg" alt="Slide 4" class="slide">
+      </div>
+          
+
+    <script>
+        $(document).ready(function() {
+            $('.counter').counterUp({
+                delay: 13,
+                time: 1600
+            });
+        });
+
+        function displayMenu() {
+            let x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+        
+                
+            <!--<ul>
+                <li><a href="#">Начало</a></li>
+                <li><a href="#">За нас</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul> 
+           
+        </nav>
+    </header>
+
+    <main>
+        <h1>Добре дошли на примерната страница!</h1>
+        <ul>
+            <li>
+                <span class="icon"><i class="fas fa-palette"></i></span> Черно-бяла палитра
+            </li>
+            <li>
+                <span class="icon"><i class="fas fa-paint-brush"></i></span> Четка
+            </li>
+            <li>
+                <span class="icon"><i class="fas fa-paint-roller"></i></span> Икона за художници
+            </li>
+        </ul>
+        <p>Това е начална HTML страница.</p>
+        <p>Можете да започнете да добавяте собствен HTML код тук.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Примерна страница. Всички права запазени.</p>
+    </footer>
+</body>
+</html>

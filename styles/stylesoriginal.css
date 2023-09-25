@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Urbanist:ital,wght@0,100;1,600&display=swap');
+
+*{
+    font-family: 'Urbanist', sans-serif;
+    box-sizing: border-box;
+    margin:0px;
+    color:white;
+}
+:root{
+    --gray: rgb(177,177,177);
+}
+body{
+    background-color: black;
+
+}
+.topnav{
+    float: right;
+}
+.topnav a{
+    font-size: 25px;
+    text-decoration: none;
+    display: none;
+}
+.topnav a.icon{
+margin: 30px;
+float: right;
+display: block;
+width: auto;
+}
+.dot {
+    font-family:'Monotone', cursive;
+    background-color: white;
+    height: 15px;
+    width:15px;
+    border-radius:50%;
+    margin: 1px;
+    float: left;
+}
+.topnav.responsive {
+    display:inline-block;
+    width: 300px;
+    position: relative;
+    z-index: +2;
+    background-color: rgba(0, 0, 0, 0.633);
+}
+.topnav.responsive a{
+    display:block;
+    text-align: left;
+    text-decoration: none;
+    padding:20px;
+}
+
+.topnav.responsive .icon{
+    position: absolute;
+    right: 0px;
+    margin: 10px;    
+}
+.logo h1 {
+    position: absolute;
+    font-size:25px;
+    margin: 20px;
+    font-family:'Monotone', cursive;
+}
+.topnav.responsive .icon .dot:nth-child(1),
+.topnav.responsive .icon .dot:nth-child(2), 
+.topnav.responsive .icon .dot:nth-child(3){
+    margin-left: 5px;
+    transition: all 0.6s;
+    background-color: var(--gray);
+}
+.topnav.responsive a:hover{
+    font-family:'Monotone', cursive;
+    color: var(--gray);
+}
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 500px; /* Променете височината според вашите нужди */
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: slide 10s infinite linear;
+    opacity: 0;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+  
+  
+  
+
+/*@keyframes remove {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    16% {
+        opacity: 0;
+    }
+}
+
+
