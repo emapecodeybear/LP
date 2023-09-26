@@ -5,13 +5,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портрет за теб</title>
     <link rel="stylesheet" href="./styles/styles.css">
-</head>
+<!--COUNTER-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+<!--END-->
+<!--AOS-->
+<link rel='stylesheet' href='https://unpkg.com/aos@2.3.0/dist/aos.css'>
+<!--END-->
+<title>Портрет за теб</title>
 
-<body>
-    <header>
-        <a href="#" class="brand">ПОРТРЕТ ЗА ТЕБ</a>
+</head>
+<header>
+     <div class="logo">
+            <img src="img/Logo.png" alt="">
+            <!-- <h1>Портрет за теб</h1> -->
+        </div>
+</header>
+    <nav>
+        <div class="topnav" id="myTopnav">
+        <a href="#" class="icon" onclick="DisplayMenu()">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </a>
+        <a href="#" onclick="DisplayGallery()">GALLERY</a>
+        <!-- <div class="menu-btn">
+        <div class="navigation">
+        <div class="navigation-items"> -->
+            <a href="#">ПОРЪЧАЙ СЕГА</a>
+            <a href="#">ГАЛЕРИЯ</a>
+            <a href="#">КОНТАКТ</a>
+            <a href="#">ОТЗИВИ</a>
+         </div>
+    </nav>
+<script>
+
+    function DisplayMenu() {
+        let x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+    }
+    else {
+        x.className = "topnav"
+    }
+}
+</script>
+
+</header>
+    <!-- <header>
+        <a href="#" class="brand">Портрет за теб</a>
         <div class="menu-btn">
             <div class="navigation">
                 <div class="navigation-items">
@@ -22,8 +66,9 @@
                 </div>
             </div>
         </div>
-    </header>
+    </header> -->
     <!--Image slider start-->
+    <body>
     <div class="slider">
         <div class="slides">
             <!--radio buttons start--->
@@ -33,6 +78,7 @@
             <input type="radio" name="radio-btn" id="radio4">
             <input type="radio" name="radio-btn" id="radio5">
             <input type="radio" name="radio-btn" id="radio6">
+
             <!--radio buttons end--->
             <!--slide images start-->
             <div class="slide first">
@@ -53,6 +99,7 @@
             <div class="slide">
                 <img src="img/6.jpg" alt="">
             </div>
+        
             <!--slide images end-->
             <!--automatic navigation start-->
             <div class="navigation-auto">
@@ -87,7 +134,7 @@
             if (counter > 6) {
                 counter = 1;
             }
-        }, 5000);
+        }, 4000);
     </script>
 </body>
 
