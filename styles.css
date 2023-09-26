@@ -1,0 +1,261 @@
+/* Първо, импорт на шрифтовете */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Sofia+Sans:wght@1;100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,1000&family=Sofia+Sans:wght@1;100&display=swap');
+
+/* Общи стилове за цялата страница */
+:root {
+  --gray: rgb(177, 177, 177);
+}
+
+body {
+ /* padding: 0px; 
+  height: 100vh; */
+  margin: 0px;
+  box-sizing: border-box; 
+  /* Добавете box-sizing тук */
+  /* justify-content: center;
+  align-items: center; */
+  background: #f4e7d6;
+  font-family: 'Sofia Sans', sans-serif;
+  /* Установяване на основен шрифт за страницата */
+  color: #625c56;
+}
+
+/* Стилове за навигационното меню */
+.topnav {
+  float: right;
+}
+
+.topnav a {
+  font-size: 25px;
+  text-decoration: none;
+  font-family: 'Sofia Sans', sans-serif;
+  color: #625c56;
+  /* Добавих този маргин за разделяне на връзките */
+  display: none;
+}
+
+.topnav a.icon {
+  margin: 30px;
+  float: right;
+  display: block;
+  width: auto;
+}
+
+/* Стилове за точките */
+.dot {
+  font-weight: 1000;
+  background-color: #625c56;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin: 1px;
+  float: left;
+}
+
+/* Стилове за респонсивното меню */
+.topnav.responsive {
+  display: inline-block;
+  width: 300px;
+  position: relative;
+  z-index: +2;
+  background-color: #f4e7d6;
+}
+
+.topnav.responsive a {
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.topnav.responsive .icon {
+  position: absolute;
+  right: 0px;
+  margin: 10px;
+}
+
+/* Стилове за логото */
+
+.logo {
+  position: absolute;
+  font-family: 'Lora', serif;
+  margin-top: 45px;
+  text-decoration: none;
+ 
+}
+
+  .logo h1 {
+    font-size: 25px;
+    color: #625c56;
+    margin-left: 20px; /* Позиционира отляво с отстъп от 20px */
+  }
+
+
+/* Стилове за навигационните елементи */
+.navigation-items {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navigation-items a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Sofia Sans', sans-serif;
+  font-size: 20px;
+  float: left;
+}
+.topnav.responsive .icon .dot:nth-child(1), .topnav.responsive .icon .dot:nth-child(2),
+.topnav.responsive .icon .dot:nth-child(3){
+    margin-left: 5px;
+    transition: all 0.6s;
+    background-color: rgb(87, 81, 81);
+}
+    
+.topnav.responsive a:hover{
+    font-family: 'Nunito Sans', sans-serif;;
+    color: #f1ad81;
+}
+/* Стилове за хедъра */
+header {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 200px;
+  transition: 0.5s;
+  background-color: transparent;
+}
+.class {
+  margin-top: 5px;
+  margin-left: 3px;
+}
+
+.slider {
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+
+.slide img {
+  width: 800px;
+  height: 500px;
+}
+
+/*css for manual slide navigation */
+.navigation-manual {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #b49786;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background: #b49786;
+}
+
+#radio1:checked~.first {
+  margin-left: 0%;
+}
+
+#radio2:checked~.first {
+  margin-left: -20%;
+}
+
+#radio3:checked~.first {
+  margin-left: -40%;
+}
+
+#radio4:checked~.first {
+  margin-left: -60%;
+}
+
+#radio5:checked~.first {
+  margin-left: -80%;
+}
+
+#radio6:checked~.first {
+  margin-left: -100%;
+}
+
+/*css for automatic navigation */
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div {
+  border: 2px solid #b49786;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+  background: #b49786;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+  background: #b49786;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+  background: #b49786;
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+  background: #b49786;
+}
+
+#radio5:checked~.navigation-auto .auto-btn5 {
+  background: #b49786;
+}
+
+#radio6:checked~.navigation-auto .auto-btn6 {
+  background: #b49786;
+}
